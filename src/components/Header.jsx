@@ -31,21 +31,21 @@ class Header extends React.Component {
     return (
       <header data-testid="header-component" className="header-component">
         <Link
-          to="/search"
+          to="/trybetunes/search"
           data-testid="link-to-search"
           className="link-to-search"
         >
           Pesquisa
         </Link>
         <Link
-          to="/favorites"
+          to="/trybetunes/favorites"
           data-testid="link-to-favorites"
           className="link-to-favorites"
         >
           Favoritas
         </Link>
         <Link
-          to="/profile"
+          to="/trybetunes/profile"
           data-testid="link-to-profile"
           className="link-to-profile"
         >

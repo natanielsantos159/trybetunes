@@ -53,7 +53,7 @@ class Profile extends React.Component {
             <h3>Descrição: </h3>
             { description }
           </div>
-          <Link to="/profile/edit">
+          <Link to="/trybetunes/profile/edit">
             <button type="button">
               Editar perfil
             </button>

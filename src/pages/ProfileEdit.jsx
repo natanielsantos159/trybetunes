@@ -149,7 +149,7 @@ class ProfileEdit extends React.Component {
                 onChange={ this.imageUpload }
               />
             </label>
-            <Link to="/profile">
+            <Link to="/trybetunes/profile">
               <button
                 type="submit"
                 data-testid="edit-button-save"
