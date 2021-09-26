@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/trybetunes/static/css/main.14f948eb.chunk.css",
+    "main.js": "/trybetunes/static/js/main.ed574d92.chunk.js",
+    "main.js.map": "/trybetunes/static/js/main.ed574d92.chunk.js.map",
+    "runtime-main.js": "/trybetunes/static/js/runtime-main.bb86886f.js",
+    "runtime-main.js.map": "/trybetunes/static/js/runtime-main.bb86886f.js.map",
+    "static/js/2.f3a74d7a.chunk.js": "/trybetunes/static/js/2.f3a74d7a.chunk.js",
+    "static/js/2.f3a74d7a.chunk.js.map": "/trybetunes/static/js/2.f3a74d7a.chunk.js.map",
+    "index.html": "/trybetunes/index.html",
+    "static/css/main.14f948eb.chunk.css.map": "/trybetunes/static/css/main.14f948eb.chunk.css.map",
+    "static/js/2.f3a74d7a.chunk.js.LICENSE.txt": "/trybetunes/static/js/2.f3a74d7a.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/trybetunes/static/media/stacked-peaks-haikei (1).fb33680a.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.bb86886f.js",
+    "static/js/2.f3a74d7a.chunk.js",
+    "static/css/main.14f948eb.chunk.css",
+    "static/js/main.ed574d92.chunk.js"
+  ]
+}
