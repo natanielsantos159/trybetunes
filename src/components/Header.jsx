@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { getUser } from '../services/userAPI';
 import Loading from './Loading';
 import '../styles/Header.css';
+import userIcon from '../images/user-circle-solid.png';
 
 class Header extends React.Component {
   constructor() {
@@ -31,21 +32,21 @@ class Header extends React.Component {
     return (
       <header data-testid="header-component" className="header-component">
         <Link
-          to="/trybetunes/search"
+          to="/search"
           data-testid="link-to-search"
           className="link-to-search"
         >
           Pesquisa
         </Link>
         <Link
-          to="/trybetunes/favorites"
+          to="/favorites"
           data-testid="link-to-favorites"
           className="link-to-favorites"
         >
           Favoritas
         </Link>
         <Link
-          to="/trybetunes/profile"
+          to="/profile"
           data-testid="link-to-profile"
           className="link-to-profile"
         >
@@ -56,7 +57,7 @@ class Header extends React.Component {
             ? <Loading loading={ loading } />
             : (
               <div className="profile-container">
-                <img src={ profilePicture } alt="Foto de perfil" />
+                <img src={ profilePicture || userIcon } alt="Foto de perfil" />
                 <span className="user-name">{userName}</span>
               </div>
             ) }
