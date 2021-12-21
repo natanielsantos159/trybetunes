@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import Loading from '../components/Loading';
 import { getUser } from '../services/userAPI';
 import '../styles/Profile.css';
+import userIcon from '../images/user-circle-solid.png';
 
 class Profile extends React.Component {
   constructor() {
@@ -29,6 +30,7 @@ class Profile extends React.Component {
 
   render() {
     const { name, email, description, image, loading } = this.state;
+    const { handleLogOut } = this.props;
     return (
       loading ? (
         <Loading loading={ loading } />
@@ -38,7 +40,7 @@ class Profile extends React.Component {
           <img
             data-testid="profile-image"
             className="profile-image"
-            src={ image }
+            src={ image || userIcon }
             alt="Foto de perfil"
           />
           <div data-testid="profile-name" className="profile-name">
@@ -53,16 +55,16 @@ class Profile extends React.Component {
             <h3>Descrição: </h3>
             { description }
           </div>
-          <Link to="/trybetunes/profile/edit">
+          <Link to="/profile/edit">
             <button type="button">
               Editar perfil
             </button>
           </Link>
-          <Link to="/trybetunes">
+          <Link to="/">
             <button
               type="button"
               className="logout-btn"
-              onClick={ () => localStorage.removeItem('user') }
+              onClick={ handleLogOut }
             >
               Sair
             </button>

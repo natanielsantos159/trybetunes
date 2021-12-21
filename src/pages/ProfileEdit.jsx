@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import Loading from '../components/Loading';
 import { getUser, updateUser } from '../services/userAPI';
 import '../styles/ProfileEdit.css';
+import userIcon from '../images/user-circle-solid.png';
 
 class ProfileEdit extends React.Component {
   constructor() {
@@ -30,14 +31,14 @@ class ProfileEdit extends React.Component {
       name,
       email,
       description,
-      image,
-      currentImage: image });
+      currentImage: image || userIcon,
+    });
   }
 
   handleSubmit = async () => {
-    const { name, email, description, image } = this.state;
+    const { name, email, description, currentImage } = this.state;
     this.setState({ loading: true });
-    await updateUser({ name, email, description, image });
+    await updateUser({ name, email, description, image: currentImage });
     this.setState({ loading: false });
   }
 
@@ -66,7 +67,7 @@ class ProfileEdit extends React.Component {
     const file = e.target.files[0];
     if (file) {
       this.getBase64(file).then((base64) => {
-        this.setState({ image: base64 });
+        this.setState({ currentImage: base64 });
       });
     }
   };
@@ -149,7 +150,7 @@ class ProfileEdit extends React.Component {
                 onChange={ this.imageUpload }
               />
             </label>
-            <Link to="/trybetunes/profile">
+            <Link to="/profile">
               <button
                 type="submit"
                 data-testid="edit-button-save"

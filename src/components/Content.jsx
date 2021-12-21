@@ -31,16 +31,16 @@ export default class Content extends Component {
             </>) : <TrybeTunesIcon />}
         <main className={ isLogged ? '' : 'login-page' }>
           <Switch>
-            <Route exact path="/trybetunes">
+            <Route exact path="/">
               { isLogged
-                ? <Redirect to="/trybetunes/search" />
+                ? <Redirect to="/search" />
                 : <Login handleSubmit={ () => { this.setState({ isLogged: true }); } } />}
             </Route>
-            <Route path="/trybetunes/search" component={ Search } />
-            <Route path="/trybetunes/album/:id" component={ Album } />
-            <Route path="/trybetunes/favorites" component={ Favorites } />
-            <Route exact path="/trybetunes/profile" component={ Profile } />
-            <Route path="/trybetunes/profile/edit" component={ ProfileEdit } />
+            <Route path="/search" component={ Search } />
+            <Route path="/album/:id" component={ Album } />
+            <Route path="/favorites" component={ Favorites } />
+            <Route exact path="/profile" render={ () => <Profile handleLogOut={ () => this.setState({ isLogged: false})} /> } />
+            <Route path="/profile/edit" component={ ProfileEdit } />
             <Route path="*" component={ NotFound } />
           </Switch>
         </main>
