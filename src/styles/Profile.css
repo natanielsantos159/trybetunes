@@ -6,3 +6,7 @@
 h3 {
   font-weight: 700;
 }
+
+.logout-btn {
+  background-color: rgb(168, 55, 55);
+}

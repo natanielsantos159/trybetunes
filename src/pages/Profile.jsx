@@ -58,6 +58,15 @@ class Profile extends React.Component {
               Editar perfil
             </button>
           </Link>
+          <Link to="/trybetunes">
+            <button
+              type="button"
+              className="logout-btn"
+              onClick={ () => localStorage.removeItem('user') }
+            >
+              Sair
+            </button>
+          </Link>
         </div>
       )
     );
